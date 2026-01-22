@@ -1,28 +1,81 @@
-<header class="hero">
-  <div class="hero-container">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code</title>
+  <meta name="description" content="Ideias reais de renda extra. Sem promessa falsa.">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-    <!-- TEXTO -->
-    <div class="hero-text">
-      <h1>
-        Ideias reais para<br>
-        <span>ganhar renda extra</span>
-      </h1>
+  <!-- HERO / TELA INICIAL -->
+  <header class="hero">
+    <div class="hero-container">
 
-      <p>
-        Caminhos honestos para ganhar dinheiro online.<br>
-        Sem promessas falsas. Sem ilusão.
-      </p>
+      <div class="hero-text animate">
+        
 
-      <div class="hero-actions">
-        <a href="oportunidades.html" class="btn primary">Ver oportunidades</a>
-        <a href="como-funciona.html" class="btn ghost">Como funciona</a>
+        <h1>
+          Ideias reais para<br>
+          <strong>ganhar renda extra</strong>
+        </h1>
+
+        <p>
+          Caminhos honestos para fazer dinheiro online.<br>
+          Simples, direto e transparente.
+        </p>
+
+        <div class="hero-actions">
+          <a href="oportunidades.html" class="btn primary">Ver oportunidades</a>
+          <a href="como-funciona.html" class="btn outline">Como funciona</a>
+        </div>
       </div>
-    </div>
 
-    <!-- IMAGEM -->
-    <div class="hero-image">
-      <img src="img/hero.png" alt="Pessoa usando notebook">
     </div>
+  </header>
 
-  </div>
-</header>
+  <!-- CONTATO / ACESSO -->
+  <section class="contact animate">
+    <div class="contact-container">
+
+      <div class="contact-text">
+        <h2>Ficou com alguma dúvida?</h2>
+        <p>
+          Se quiser entender melhor como funciona ou saber qual caminho faz mais sentido pra você,
+          chama no WhatsApp.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <a href="entrar.html" class="btn outline">Entrar</a>
+
+        <a 
+          href=https://wa.me/5513997497798?text=Oi,não entendi.
+          target="_blank" 
+          class="btn whatsapp"
+        >
+          Falar no WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCRIPT ANIMAÇÃO -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

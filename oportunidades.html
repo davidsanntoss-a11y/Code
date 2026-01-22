@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oportunidades — Code</title>
+  <meta name="description" content="Oportunidades reais de renda extra. Escolha o caminho que faz sentido pra você.">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1>Oportunidades reais</h1>
+    <p>Escolha um caminho. Sem promessa falsa.</p>
+  </header>
+
+  <!-- BUSCA -->
+  <section class="search-section">
+  <div class="search-box">
+    <span class="icon"></span>
+    <input 
+      type="search" 
+      id="searchInput"
+      placeholder="Buscar oportunidade..."
+    />
+  </div>
+</section>
+
+
+  <!-- LISTA -->
+  <main class="cards-container">
+
+    <section class="card animate">
+      <h2>Marketing de Afiliados</h2>
+      <p>Venda produtos digitais e ganhe comissão por indicação.</p>
+
+      <ul>
+        <li><strong>Pra quem:</strong> Iniciante</li>
+        <li><strong>Precisa:</strong> Celular + internet</li>
+      </ul>
+
+      <a href="afiliados.html" class="btn primary">Ver detalhes</a>
+    </section>
+
+    <section class="card animate">
+      <h2>Freelancer Online</h2>
+      <p>Use suas habilidades para prestar serviços pela internet.</p>
+
+      <ul>
+        <li><strong>Pra quem:</strong> Quem já sabe algo</li>
+        <li><strong>Precisa:</strong> Habilidade + prática</li>
+      </ul>
+
+      <a href="freelancer.html" class="btn primary">Ver detalhes</a>
+    </section>
+
+    <section class="card animate">
+      <h2>Criação de Sites Simples</h2>
+      <p>Crie sites básicos para pequenos negócios locais.</p>
+
+      <ul>
+        <li><strong>Pra quem:</strong> Quem quer renda mensal</li>
+        <li><strong>Precisa:</strong> Computador + estudo</li>
+      </ul>
+
+      <a href="sites.html" class="btn primary">Ver detalhes</a>
+    </section>
+
+  </main>
+
+  <!-- SCRIPT ANIMAÇÃO -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const cards = document.querySelectorAll('.card');
+
+  searchInput.addEventListener('input', () => {
+    const value = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+
+      if (text.includes(value)) {
+        card.classList.remove('hide');
+        card.style.display = 'block';
+      } else {
+        card.classList.add('hide');
+        setTimeout(() => {
+          card.style.display = 'none';
+        }, 300);
+      }
+    });
+  });
+</script>
+<div class="back-button">
+  <button onclick="history.back()" aria-label="Voltar">
+    &#8592;
+  </button>
+</div>
+
+</body>
+</html>

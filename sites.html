@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Criação de Sites — Code</title>
+  <meta name="description" content="Entenda como ganhar renda extra criando sites simples para negócios locais.">
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Font Awesome -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- BOTÃO VOLTAR -->
+  <div class="back-button">
+    <button onclick="history.back()" aria-label="Voltar">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero hero-small">
+    <div class="hero-container">
+      <div class="hero-text animate">
+        <h1>
+          Criação de<br>
+          <strong>Sites</strong>
+        </h1>
+
+        <p>
+          Você cria sites simples para negócios locais
+          e cobra pelo serviço ou manutenção mensal.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container affiliate">
+
+    <section class="affiliate-card animate">
+      <h2>O que é?</h2>
+      <p>
+        Criar sites institucionais, landing pages ou páginas simples
+        para empresas que precisam aparecer na internet.
+      </p>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>Quem compra?</h2>
+      <ul>
+        <li><i class="fa-solid fa-store"></i> Lojas locais</li>
+        <li><i class="fa-solid fa-utensils"></i> Restaurantes</li>
+        <li><i class="fa-solid fa-scissors"></i> Barbeiros e salões</li>
+        <li><i class="fa-solid fa-briefcase"></i> Prestadores de serviço</li>
+      </ul>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>O que você precisa?</h2>
+      <ul>
+        <li><i class="fa-solid fa-laptop-code"></i> Noções de HTML e CSS</li>
+        <li><i class="fa-solid fa-wifi"></i> Internet</li>
+        <li><i class="fa-solid fa-clock"></i> Tempo pra aprender e praticar</li>
+        <li><i class="fa-solid fa-brain"></i> Paciência no começo</li>
+      </ul>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>O que NÃO é</h2>
+      <ul>
+        <li><i class="fa-solid fa-xmark"></i> Dinheiro rápido</li>
+        <li><i class="fa-solid fa-xmark"></i> Código mágico</li>
+        <li><i class="fa-solid fa-xmark"></i> Sem estudo</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- CTA -->
+  <section class="contact animate">
+    <div class="contact-container">
+
+      <div class="contact-text">
+        <h2>Quer aprender do jeito certo?</h2>
+        <p>
+          Posso te explicar como começar do zero
+          e vender seus primeiros sites sem complicação.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <a 
+          href="https://wa.me/55SEUNUMEROAQUI?text=Oi%2C%20vim%20do%20site%20e%20quero%20entender%20criação%20de%20sites"
+          target="_blank"
+          class="btn whatsapp"
+        >
+          Falar no WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ANIMAÇÃO -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

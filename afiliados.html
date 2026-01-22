@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marketing de Afiliados — Code</title>
+  <meta name="description" content="Entenda como ganhar dinheiro com marketing de afiliados.">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- ICONS (Font Awesome) -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- BOTÃO VOLTAR -->
+  <div class="back-button">
+    <button onclick="history.back()" aria-label="Voltar">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero hero-small">
+    <div class="hero-container">
+      <div class="hero-text animate">
+        <h1>
+          Marketing de<br>
+          <strong>Afiliados</strong>
+        </h1>
+
+        <p>
+          Você indica produtos digitais e ganha comissão por cada venda.
+          Simples no conceito, sério na execução.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container affiliate">
+
+    <section class="affiliate-card animate">
+      <h2>O que é?</h2>
+      <p>
+        Você divulga produtos de outras pessoas usando um link exclusivo.
+        Quando alguém compra por ele, você recebe uma porcentagem.
+      </p>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>O que dá pra vender?</h2>
+      <ul>
+        <li><i class="fa-solid fa-book"></i> Cursos online</li>
+        <li><i class="fa-solid fa-graduation-cap"></i> Mentorias</li>
+        <li><i class="fa-solid fa-brain"></i> E-books</li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i> Ferramentas digitais</li>
+      </ul>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>Onde divulgar?</h2>
+      <ul>
+        <li><i class="fa-brands fa-tiktok"></i> TikTok</li>
+        <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+        <li><i class="fa-solid fa-globe"></i> Blogs e sites</li>
+        <li><i class="fa-solid fa-comments"></i> Comunidades</li>
+      </ul>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>O que NÃO é</h2>
+      <ul>
+        <li><i class="fa-solid fa-xmark"></i> Dinheiro fácil</li>
+        <li><i class="fa-solid fa-xmark"></i> Ganho automático sem esforço</li>
+        <li><i class="fa-solid fa-xmark"></i> Resultado da noite pro dia</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- CTA -->
+  <section class="contact animate">
+    <div class="contact-container">
+
+      <div class="contact-text">
+        <h2>Quer começar do jeito certo?</h2>
+        <p>
+          Chama no WhatsApp e eu te explico os primeiros passos
+          sem enrolação.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+<a 
+  href="https://wa.me/55SEUNUMEROAQUI?text=Oi%2C%20vim%20do%20site%20e%20quero%20entender%20marketing%20de%20afiliados"
+  target="_blank"
+  class="btn whatsapp"
+>
+  Falar no WhatsApp
+</a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ANIMAÇÃO -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

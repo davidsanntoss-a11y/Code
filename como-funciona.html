@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Como funciona — Code</title>
+  <meta name="description" content="Entenda como funcionam as oportunidades de renda extra.">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- BOTÃO VOLTAR -->
+  <div class="back-button">
+    <button onclick="history.back()" aria-label="Voltar">&#8592;</button>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero hero-small">
+    <div class="hero-container">
+
+      <div class="hero-text animate">
+        <h1>
+          Como funciona o<br>
+          <strong>Trampo Rápido</strong>
+        </h1>
+
+        <p>
+          Nada de milagre. Aqui é processo e constância.
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container steps">
+
+    <section class="step animate">
+      <span class="step-number">01</span>
+      <h2>Escolha uma oportunidade</h2>
+      <p>
+        Você escolhe o caminho que mais combina com você:
+        afiliados, freelancer ou criação de sites.
+      </p>
+    </section>
+
+    <section class="step animate">
+      <span class="step-number">02</span>
+      <h2>Aprenda o básico</h2>
+      <p>
+        A gente explica o essencial pra começar sem confusão,
+        sem promessa falsa e sem papo de guru.
+      </p>
+    </section>
+
+    <section class="step animate">
+      <span class="step-number">03</span>
+      <h2>Aplique no mundo real</h2>
+      <p>
+        Resultado vem de prática. Testa, erra, ajusta e continua.
+        Quem insiste, colhe.
+      </p>
+    </section>
+
+    <section class="step animate">
+      <span class="step-number">04</span>
+      <h2>Evolua com consistência</h2>
+      <p>
+        Não é corrida de 100 metros, é maratona.
+        Pequenos ganhos viram renda real com o tempo.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- CONTATO -->
+  <section class="contact animate">
+    <div class="contact-container">
+
+      <div class="contact-text">
+        <h2>Ainda ficou confuso?</h2>
+        <p>
+          Chama no WhatsApp que a gente troca uma ideia sem compromisso.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <a href="https://wa.me/55SEUNUMEROAQUI?text=Oi%2C%20vim%20do%20site%20Trampo%20R%C3%A1pido%20e%20quero%20entender%20melhor%20como%20funciona"
+           target="_blank"
+           class="btn whatsapp">
+          Falar no WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ANIMAÇÃO -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

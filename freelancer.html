@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Freelancer Online — Code</title>
+  <meta name="description" content="Como ganhar dinheiro como freelancer online de forma honesta.">
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Font Awesome -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- BOTÃO VOLTAR -->
+  <div class="back-button">
+    <button onclick="history.back()" aria-label="Voltar">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero hero-small">
+    <div class="hero-container">
+      <div class="hero-text animate">
+        <h1>
+          Freelancer<br>
+          <strong>Online</strong>
+        </h1>
+
+        <p>
+          Você presta serviços pela internet e recebe por projeto.
+          Trabalho real, pagamento real.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container affiliate">
+
+    <section class="affiliate-card animate">
+      <h2>O que é?</h2>
+      <p>
+        Freelancer é quem vende serviço, não tempo.
+        Você resolve um problema e recebe por isso.
+      </p>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>Serviços mais comuns</h2>
+      <ul>
+        <li><i class="fa-solid fa-paintbrush"></i> Design gráfico</li>
+        <li><i class="fa-solid fa-pen-nib"></i> Escrita e copy</li>
+        <li><i class="fa-solid fa-code"></i> Sites e programação</li>
+        <li><i class="fa-solid fa-video"></i> Edição de vídeo</li>
+      </ul>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>Onde conseguir clientes?</h2>
+      <ul>
+        <li><i class="fa-solid fa-globe"></i> Plataformas de freelancer</li>
+        <li><i class="fa-brands fa-instagram"></i> Redes sociais</li>
+        <li><i class="fa-solid fa-briefcase"></i> Negócios locais</li>
+        <li><i class="fa-solid fa-comments"></i> Indicações</li>
+      </ul>
+    </section>
+
+    <section class="affiliate-card animate">
+      <h2>O que NÃO é</h2>
+      <ul>
+        <li><i class="fa-solid fa-xmark"></i> Dinheiro fácil</li>
+        <li><i class="fa-solid fa-xmark"></i> Resultado imediato</li>
+        <li><i class="fa-solid fa-xmark"></i> Trabalhar sem aprender</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- CTA -->
+  <section class="contact animate">
+    <div class="contact-container">
+
+      <div class="contact-text">
+        <h2>Quer começar como freelancer?</h2>
+        <p>
+          Posso te mostrar o caminho mais simples
+          de acordo com o que você sabe fazer hoje.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <a 
+          href="https://wa.me/55SEUNUMEROAQUI?text=Oi%2C%20vim%20do%20site%20e%20quero%20entender%20freelancer%20online"
+          target="_blank"
+          class="btn whatsapp"
+        >
+          Falar no WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ANIMAÇÃO -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
