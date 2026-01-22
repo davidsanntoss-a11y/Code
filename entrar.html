@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entrar — Trampo Rápido</title>
+  <meta name="description" content="Área de acesso Trampo Rápido">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- BOTÃO VOLTAR -->
+  <div class="back-button">
+    <button onclick="history.back()" aria-label="Voltar">&#8592;</button>
+  </div>
+
+  <section class="hero hero-small">
+    <div class="hero-container">
+      <div class="hero-text animate">
+        <h1>
+          Área de<br>
+          <strong>Entrada</strong>
+        </h1>
+
+        <p>
+          Essa área pode ser usada futuramente para login,
+          acesso a conteúdos ou contato direto.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/55SEUNUMEROAQUI?text=Oi%2C%20quero%20acessar%20o%20Trampo%20Rápido"
+             target="_blank"
+             class="btn primary">
+            Entrar em contato
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
